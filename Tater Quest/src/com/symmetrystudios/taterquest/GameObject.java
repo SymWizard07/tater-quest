@@ -30,8 +30,12 @@ public abstract class GameObject {
 		this.y = y;
 	}
 
-	protected Image getSprite() {
+	public Image getSprite() {
 		return sprite;
+	}
+	
+	public void resizeSprite(int width, int height) {
+		sprite = sprite.getScaledInstance(width, height, Image.SCALE_DEFAULT);
 	}
 
 	protected abstract void update();

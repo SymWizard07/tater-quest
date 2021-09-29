@@ -11,6 +11,8 @@ import javax.swing.JFrame;
 
 import com.symmetrystudios.taterquest.gameobjects.*;
 
+import sprites.ResourceLoader;
+
 public class Main {
 	
 	public static int FRAME_WIDTH, FRAME_HEIGHT;
@@ -71,14 +73,10 @@ public class Main {
 	    f.dispose();
 	}
 	
-	public static Image loadImage(File file) {
+	public static Image loadSprite(String spriteName) {
+		
 		Image loadedImage = null;
-		try {
-			loadedImage = ImageIO.read(file);
-		}
-		catch (IOException e) {
-			e.printStackTrace();
-		}
+		loadedImage = ResourceLoader.loadSprite(spriteName);
 		
 		return loadedImage;
 	}

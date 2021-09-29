@@ -14,7 +14,8 @@ public class TaterTot extends GameObject {
 	public TaterTot(int x, int y) {
 		super(x, y);
 		
-		sprite = Main.loadImage(new File("assets/tot.png"));
+		sprite = Main.loadSprite("tot.png");
+		resizeSprite(200, 200);
 	}
 
 	@Override
